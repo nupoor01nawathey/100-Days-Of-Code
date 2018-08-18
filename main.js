@@ -1,5 +1,5 @@
 // add options and get form id/class
-const CLIENT_ID       = '<YOUR_KEY>' ,
+const CLIENT_ID       = 'YOUR_CLIENT_ID' ,
       DISCOVERY_DOCS  = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"] ,
       SCOPES          = 'https://www.googleapis.com/auth/youtube.readonly' ,
 
@@ -39,7 +39,7 @@ function initClient() {
 function updateSigninStatus(isSignedIn){
     console.log('--------------------');
     console.log(isSignedIn);
-    console.log('--------------------');
+    console.log('*****************');
 
     isSignedIn
     if(isSignedIn) {
