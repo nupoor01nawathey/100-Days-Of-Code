@@ -19,11 +19,24 @@
                 name: "Nupoor",
                 age: 28
             }
+            handleClick(e) {
+                console.log("button clicked");
+            }
+            handleMouseOver(e) {
+                console.log(e.target);
+            }
+            handleCopy() {
+                console.log("Please try to be original once");
+            }
+
             render() {
                 return (
                     <div className="app-content">
                         <h1>Hey, Reactjs</h1> 
                         <p>My name is {this.state.name} and I'm {this.state.age} years old.</p>
+                        <button onClick={this.handleClick}>Handle button click</button>
+                        <button onMouseOver={this.handleMouseOver}>Handle mouse hover on button</button>
+                        <p onCopy={this.handleCopy}>This is to be copied text.</p>
                     </div>
                 )
             }
