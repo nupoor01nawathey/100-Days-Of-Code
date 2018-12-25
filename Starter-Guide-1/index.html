@@ -15,16 +15,23 @@
     <div id="app"></div>
     <script type="text/babel">
         class App extends React.Component {
+            
             state = {
                 name: "Nupoor",
                 age: 28
             }
-            handleClick(e) {
-                console.log("button clicked");
+
+            handleClick = (e) => {
+                this.setState({
+                    name: "Yoshi",
+                    age: "25"
+                });
             }
+
             handleMouseOver(e) {
                 console.log(e.target);
             }
+
             handleCopy() {
                 console.log("Please try to be original once");
             }
