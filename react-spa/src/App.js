@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sample from './myComponent';
+import AddNewKid from './AddNewKid';
 
 class App extends Component {
   state = {
@@ -15,6 +16,7 @@ class App extends Component {
       <div className="App">
           <p>I'm from main App.js</p>
           <Sample kids={ this.state.details }/>
+          <AddNewKid />
       </div>
     )
   }
