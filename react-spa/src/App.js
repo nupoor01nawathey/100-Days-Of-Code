@@ -13,19 +13,27 @@ class App extends Component {
   }
 
   addNewKid = (newKid) => {
-    newKid.id = Math.random() * 10000 ;
+    newKid.id = Math.random() * 10 ;
     let kids = [...this.state.details, newKid];
     this.setState({
       details: kids
     });
-    console.log(newKid);
+  }
+
+  deleteKid = (id) => {
+    let kids = this.state.details.filter(kid => {
+        return kid.id !== id;
+    });
+    this.setState({
+      details: kids
+    });
   }
 
   render() {
     return (
       <div className="App">
           <p>I'm from main App.js</p>
-          <Sample kids={ this.state.details }/>
+          <Sample kids={this.state.details} deleteKid={this.deleteKid} />
           <AddNewKid addNewKid={this.addNewKid} />
       </div>
     )
