@@ -11,12 +11,22 @@ class App extends Component {
       { name: "Myrah", age: "3", city: "Nagpur", id: 4 }
     ]
   }
+
+  addNewKid = (newKid) => {
+    newKid.id = Math.random() * 10000 ;
+    let kids = [...this.state.details, newKid];
+    this.setState({
+      details: kids
+    });
+    console.log(newKid);
+  }
+
   render() {
     return (
       <div className="App">
           <p>I'm from main App.js</p>
           <Sample kids={ this.state.details }/>
-          <AddNewKid />
+          <AddNewKid addNewKid={this.addNewKid} />
       </div>
     )
   }
